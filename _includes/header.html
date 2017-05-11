@@ -1,0 +1,49 @@
+<header class="l-header">
+    <div class="l-navbar l-navbar_expand l-navbar_t-light js-navbar-sticky">
+        <div class="container-fluid">
+            <nav class="menuzord js-primary-navigation" role="navigation" aria-label="Primary Navigation">
+                <!--logo start-->
+                <a href="index.html" class="logo-brand">
+                    <img class="retina" src="{{ "/assets/img/logo.png" | relative_url }}" alt="Massive">
+                </a>
+                <!--logo end-->
+
+                <!--menu start-->
+                <ul class="menuzord-menu menuzord-right c-nav_s-standard" style="overflow-x: hidden;">
+
+                    {% if page.menu == "Home" %}
+                        <li class="active"><a href="{{ site.url }}" class="active">Home</a></li>
+                    {% else %}
+                        <li><a href="{{ site.url }}">Home</a></li>
+                    {% endif %}
+
+                    {% if page.menu == "Portfolio" %}
+                        <li class="active"><a href="{{ site.url }}/portfolio" class="active">Portfolio</a></li>
+                    {% else %}
+                        <li><a href="{{ site.url }}/portfolio">Portfolio</a></li>
+                    {% endif %}
+
+                    {% if page.menu == "Pricing" %}
+                        <li class="active"><a href="{{ site.url }}/pricing" class="active">Pricing</a></li>
+                    {% else %}
+                        <li><a href="{{ site.url }}/pricing">Pricing</a></li>
+                    {% endif %}
+
+                    {% if page.menu == "Blog" %}
+                        <li class="active"><a href="{{ site.url }}/blog" class="active">Blog</a></li>
+                    {% else %}
+                        <li><a href="{{ site.url }}/blog">Blog</a></li>
+                    {% endif %}
+
+                    {% if page.menu == "Contact" %}
+                        <li class="active"><a href="{{ site.url }}/contact" class="active">Contact</a></li>
+                    {% else %}
+                        <li><a href="{{ site.url }}/contact">Contact</a></li>
+                    {% endif %}
+                </ul>
+                <!--menu end-->
+                
+            </nav>
+        </div>
+    </div>
+</header>

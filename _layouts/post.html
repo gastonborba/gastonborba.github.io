@@ -1,0 +1,129 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+    <!--page title start-->
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-uppercase">{{ page.title }}</h4>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a>
+                        </li>
+                        <li class="active"><a href="#">Blog</a>
+                        </li>
+                        <li class="active">{{ page.title }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--page title end-->
+    <!--body content start-->
+    <section class="body-content ">
+        <div class="page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--classic image post-->
+                        <div class="blog-classic">
+                            <div class="blog-post">
+                                {% if page.image %}
+                                    <div class="full-width">
+                                        <img src="{{ page.image }}" alt="" />
+                                    </div>
+                                {% endif %} 
+                                <h4 class="text-uppercase"><a href="javascript:void(0);">{{ page.title }}</a></h4>
+                                <ul class="post-meta">
+                                    <li><i class="fa fa-user"></i>posted by <a href="#">{{ page.author }}</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-folder-open"></i> 
+
+                                        {% for category in page.categories %}
+                                            <a href="#">{{ category }} {% if category != page.categories.last %}, {% endif %}</a>
+                                        {% endfor %}
+                                    </li>
+                                    {% if page.comments != false %}
+                                        <li><i class="fa fa-comments"></i><a href="{{ page.url }}#disqus_thread">0 Comments</a>
+                                        </li>
+                                    {% endif %}   
+                                </ul>
+
+                                {{ content }}
+
+
+                                <div class="inline-block">
+                                    <div class="widget-tags">
+                                        <h6 class="text-uppercase">Tags </h6>
+                                        {% for tag in page.tags %}
+                                          <a href="">{{ tag }}</a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="clearfix inline-block m-top-50 m-bot-50">
+                                    <h6 class="text-uppercase">Share this Post </h6>
+                                        <div class="widget-social-link circle">
+                                            <a href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+                                            <a href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                                            <a href="javascript:void(0);"><i class="fa fa-dribbble"></i></a>
+                                            <a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a>
+                                            <a href="javascript:void(0);"><i class="fa fa-behance"></i></a>
+                                        </div>
+                                </div>
+                                <div class="pagination-row">
+                                    <div class="pagination-post">
+                                        <div class="prev-post">
+
+                                            {% if page.previous.url %}
+                                                <a href="{{page.previous.url}}">
+                                            {% else %}
+                                                <a href="javascript:void(0);">
+                                            {% endif %}
+                                            
+                                                <div class="arrow">
+                                                    <i class="fa fa-angle-double-left"></i>
+                                                </div>
+                                                <div class="pagination-txt">
+                                                    <span>Previous Post</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="post-list-link">
+                                            <a href="{{ site.url }}/blog">
+                                                <i class="fa fa-home"></i>
+                                            </a>
+                                        </div>
+                                        <div class="next-post">
+                                            {% if page.next.url %}
+                                                <a href="{{page.next.url}}">
+                                            {% else %}
+                                                <a href="javascript:void(0);">
+                                            {% endif %}
+                                                <div class="arrow">
+                                                    <i class="fa fa-angle-double-right"></i>
+                                                </div>
+                                                <div class="pagination-txt">
+                                                    <span>Next Post</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% if site.disqus.shortname %}
+                                    {% include disqus_comments.html %}
+                                {% endif %}
+
+                            </div>
+                        </div>
+                        <!--classic image post-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--body content end-->
+</div>

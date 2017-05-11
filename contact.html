@@ -1,0 +1,165 @@
+---
+layout: default
+title: Contact
+menu: Contact
+---
+<!--page title start-->
+<section class="page-title background-title dark banner-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-uppercase">Contact us </h3>
+                <span class="text-uppercase"> feel free to ask your question any time </span>
+                <ol class="breadcrumb box">
+                    <li><a href="#">Home</a>
+                    </li>
+                    <li><a href="#">Contact</a>
+                    </li>
+                    <li class="active">Contact us</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<!--page title end-->
+<!--body content start-->
+<section class="body-content">
+    <div class="page-content">
+        <div class="container">
+            <div class="heading-title-alt border-short-bottom text-center ">
+                <h3 class="text-uppercase">feel free to drop us a line</h3>
+                <div class="half-txt">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Nam libero tempore</div>
+            </div>
+            <div class="row page-content">
+                <div class="col-md-4">
+                    <div class="featured-item text-center">
+                        <div class="icon">
+                            <i class="icon-map"></i>
+                        </div>
+                        <div class="title text-uppercase">
+                            <h4>location</h4>
+                        </div>
+                        <div class="desc">
+                            Upper Level, Overseas Passenger
+                            <br/>Terminal, The Rocks, Sydney 2000
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="featured-item text-center">
+                        <div class="icon">
+                            <i class="icon-mobile"></i>
+                        </div>
+                        <div class="title text-uppercase">
+                            <h4>call us</h4>
+                        </div>
+                        <div class="desc">
+                            Any time. We are open 24/7
+                            <br/>+1 2345-67-89000
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="featured-item text-center">
+                        <div class="icon">
+                            <i class="icon-envelope"></i>
+                        </div>
+                        <div class="title text-uppercase">
+                            <h4>mail us</h4>
+                        </div>
+                        <div class="desc">
+                            get support via email
+                            <br/><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="9bf6faf2f7dbf6fae8e8f2edfeeff3fef6feb5f8f4f6">[email&#160;protected]</a>
+                            <script data-cfhash='f9e31' type="text/javascript">
+                            /* <![CDATA[ */ ! function(t, e, r, n, c, a, p) {
+                                try {
+                                    t = document.currentScript || function() {
+                                        for (t = document.getElementsByTagName('script'), e = t.length; e--;)
+                                            if (t[e].getAttribute('data-cfhash')) return t[e]
+                                    }();
+                                    if (t && (c = t.previousSibling)) {
+                                        p = t.parentNode;
+                                        if (a = c.getAttribute('data-cfemail')) {
+                                            for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice(-2);
+                                            p.replaceChild(document.createTextNode(decodeURIComponent(e)), c)
+                                        }
+                                        p.removeChild(t)
+                                    }
+                                } catch (u) {}
+                            }() /* ]]> */
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="alert alert-success" id="success-alert" hidden>
+                        Your message was sent successfully.
+                    </div>
+                    <form id="contact-form" class="contact-comments js-Mailer" action="https://getsimpleform.com/messages?form_api_token=78fb4cb45b17e070676bd0ce66ce825c" method="post">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="form-group">
+                                    <!-- Name -->
+                                    <input type="text" name="name" class=" form-control" placeholder="Name *" maxlength="100" required data-error="You must enter name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Email -->
+                                    <input type="email" name="email" class=" form-control" placeholder="Email *" maxlength="100" required data-error="Invalid email address!">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Subject -->
+                                    <input type="text" name="subject" class=" form-control" placeholder="Subject" maxlength="100">
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <div class="form-group">
+                                    <!-- Comment -->
+                                    <textarea name="comments" class="cmnt-text form-control" placeholder="Comments" maxlength="400"></textarea>
+                                </div>
+                                <div class="form-group full-width">
+                                    <button id="contact-submit-button" type="submit" class="btn btn-small btn-dark-solid "  data-loading-text="Sending..." autocomplete="off" >Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--body content end-->
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+    var form = $('#contact-form');
+    form.submit(function (e) {
+        var $button = $('#contact-submit-button');
+        $button.button('loading');
+        $.ajax({
+            type:   form.attr('method'),
+            url:    form.attr('action'),
+            data:   form.serialize(),
+            success: function (data) {
+                
+                $button.button('reset');
+
+                $('#success-alert').fadeIn('slow');
+
+                $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+                    $("#success-alert").slideUp(500);
+                });
+            }
+        });
+
+        e.preventDefault();
+    });
+});
+
+</script>

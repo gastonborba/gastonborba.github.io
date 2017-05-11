@@ -1,0 +1,24 @@
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .date { display: none; }
+}
+
+@media screen and (min-width: 769px) {
+  .date { display: block; }
+}
+
+.highlight code {
+  white-space: pre;    // this sets all children inside to nowrap
+}
+
+
+.btn-app-store {
+	padding: 0;
+	margin-right: 0;
+	border: 0;
+}
+
+.visit-website-black {
+	background-color: black;
+	margin-right: 0;
+}

@@ -1,0 +1,63 @@
+<footer id="footer" class="dark">
+    <div class="primary-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="m-bot-20 footer-logo">
+                        <img class="retina" src="{{ "/assets/img/logo-dark.png" | relative_url }}" alt="">
+                    </a>
+                    <p>Massive is fully responsible, performance oriented and SEO optimized, retina ready WordPress theme.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-uppercase">recent posts</h5>
+                    <ul class="f-list">
+
+                        {% for post in site.posts limit:5 %}
+                            <li><a href="{{ post.url }}">{{ post.title }}</a>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-uppercase">quick link</h5>
+                    <ul class="f-list">
+                        <li><a href="{{ site.url }}">Home</a></li>
+                        <li><a href="{{ site.url }}/portfolio">Portfolio</a></li>
+                        <li><a href="{{ site.url }}/pricing">Pricing</a></li>
+                        <li><a href="{{ site.url }}/blog">Blog</a></li>
+                        <li><a href="{{ site.url }}/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-uppercase">Recent Work</h5>
+                    <ul class="r-work">
+
+                        {% for proyect in site.proyects limit:9 %}
+                            <li><a href="{{ proyect.url }}"><img src="{{ proyect.thumbnail }}" alt=""></a></li>
+                        {% endfor %}
+    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="secondary-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="m-top-10">Copyright 2017 Borbit | All Rights Reserved</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-link circle pull-right">
+                        <a href="{{ site.facebook_link }}"><i class="fa fa-facebook"></i></a>
+                        <a href="{{ site.twitter_link }}"><i class="fa fa-twitter"></i></a>
+                        <a href="{{ site.linkedin_link }}"><i class="fa fa-linkedin"></i></a>
+                        <a href="{{ site.github_link }}"><i class="fa fa-github"></i></a>
+                        <a href="{{ site.skype_link }}"><i class="fa fa-skype"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

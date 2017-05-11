@@ -1,0 +1,68 @@
+---
+layout: default
+title: Portfolio
+menu: Portfolio
+---
+
+        <!--page title start-->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="text-uppercase">Portfolio Listing</h4>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Home</a>
+                            </li>
+                            <li><a href="#">Portfolio</a>
+                            </li>
+                            <li class="active">Portfolio Listing</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page title end-->
+
+        <!--body content start-->
+        <section class="body-content page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--filter start-->
+                        <div class="text-center">
+                            <ul class="portfolio-filter">
+                                <li class="active"><a href="#" data-filter="*"> All</a>
+                                </li>
+                                <li><a href="#" data-filter=".cat_ios">iOS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--filter end-->
+
+                        <div class="portfolio col-2 gutter ">
+
+                            {% for proyect in site.proyects %}
+                                <div class="portfolio-item {{ proyect.categories | join: ' ' }}">
+                                    <div class="thumb">
+
+                                        <img src="{{ proyect.image }}" alt="">
+                                        <div class="portfolio-hover">
+                                            <div class="action-btn">
+                                                <a href="{{proyect.url}}"> <i class="icon-basic_magnifier"></i> 
+                                                </a>
+                                            </div>
+                                            <div class="portfolio-description">
+                                                <h4><a href="{{proyect.url}}">{{proyect.title}}</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--body content end-->

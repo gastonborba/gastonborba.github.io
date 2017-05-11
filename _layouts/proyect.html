@@ -1,0 +1,156 @@
+---
+layout: default
+--- 
+
+<!--page title start-->
+<section class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-uppercase">{{ page.title }}</h4>
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a>
+                    </li>
+                    <li><a href="#">Portfolio</a>
+                    </li>
+                    <li class="active">{{ page.title }}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<!--page title end-->
+
+<!--body content start-->
+<section class="body-content">
+
+
+    <div class="container">
+        <div class="row ">
+
+            <div class="col-md-12">
+                <div class="portfolio-nav-row">
+                    <div class="portfolio-nav left">
+                        {% if page.previous.url %}
+                            <a href="{{page.previous.url}}">
+                        {% else %}
+                            <a href="javascript:void(0);">
+                        {% endif %}
+                                <i class="fa fa-angle-left"></i>  <span>Prev </span>
+                            </a>
+                        <a href="{{ site.url }}/portfolio"><i class="fa fa-th-large"></i></a>
+
+                        {% if page.next.url %}
+                            <a href="{{page.next.url}}">
+                        {% else %}
+                            <a href="javascript:void(0);">
+                        {% endif %}
+                                <span>Next</span> <i class="fa fa-angle-right"></i>
+                            </a>
+                    </div>
+                </div>
+                
+
+                <div class="full-width">
+                    <div class="tb-grid">
+
+                        <div class="item box2">
+                            <figure class="item-inner box-img" data-src="{{ page.gallery[0] }}" data-mfp-src="{{ page.gallery[0] }}"
+                            style="background-image: url(&quot;{{ page.gallery[0] }}&quot;);"></figure>
+                        </div>
+
+                        <div class="item box">
+                            <figure class="item-inner box-img" data-src="{{ page.gallery[1] }}" data-mfp-src="{{ page.gallery[1] }}"
+                            style="background-image: url(&quot;{{ page.gallery[1] }}&quot;);"></figure>
+                        </div>
+
+                        <div class="item box">
+                            <figure class="item-inner box-img" data-src="{{ page.gallery[2] }}" data-mfp-src="{{ page.gallery[2] }}"
+                            style="background-image: url(&quot;{{ page.gallery[2] }}&quot;);"></figure>
+                        </div>
+
+                        <div class="item box2">
+                            <figure class="item-inner box-img" data-src="{{ page.gallery[3] }}" data-mfp-src="{{ page.gallery[3] }}"
+                            style="background-image: url(&quot;{{ page.gallery[3] }}&quot;);"></figure>
+                        </div>         
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page-content">
+                <div class="col-md-8">
+                    <div class="heading-title-side-border text-left">
+                        <h4 class="text-uppercase">Project Details</h4>
+                        <div class="title-border-container">
+                            <div class="title-border"></div>
+                        </div>
+                    </div>
+
+                    {{ content }}
+
+
+                </div>
+                <div class="col-md-4">
+                    <ul class="portfolio-meta m-bot-30">
+                        <li><span> Client </span>{{ page.client }}</li>
+                        <li><span> Created by </span>{{ page.author }}</li>
+                        <li><span> Completed on </span>{{ page.completed_on | date: "%-d %B %Y"}}</li>
+                        <li><span> Skills </span>
+                            {% for skill in page.skills %}
+                                {{ skill }} {% if skill != page.skills.last %} / {% endif %}
+                            {% endfor %}
+                        </li>
+                        <li><span> Share </span>  
+
+                            <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title }}"><i class="fa fa-pinterest"></i></a>
+                            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title=<TITILE>&summary={{ page.title }}"><i class="fa fa-linkedin"></i></a>
+
+                        </li>
+                    </ul>
+                    <div>
+                        {% if page.download %}
+                            <a class="btn btn-app-store" href="{{ page.download }}"><img src="{{ "/assets/img/Download_on_the_App_Store_Badge_US-UK_135x40.svg" | relative_url }}" alt="" /></a>
+                        {% endif %}
+                        <a href="{{ page.website }}" class="btn btn-small btn-rounded btn-dark-solid visit-website-black  "> Visit website </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!--body content end-->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.tb-grid').masonry({
+            // options
+            itemSelector: '.item',
+            percentPosition: true,
+            columnWidth: '.box',
+        });
+
+        var $imgBoxes = $('.tb-grid').find('.box-img');
+        $imgBoxes.each(function(index, item) {
+            var $item = $(item), src = $item.data('src');
+            if(src) {
+                $item.css({
+                    backgroundImage: 'url(' + src + ')'
+                })
+            }
+        });
+
+        $('.box-img').magnificPopup({
+            type:'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    });
+</script>
