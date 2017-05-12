@@ -70,7 +70,7 @@ menu: Contact
                         <div class="desc">
                             get support via email
                             <br/>
-                            <img class="img-email" src="{{ "/assets/img/mail.png" | relative_url }}" alt="">
+                            <a id="email" href="#" onclick='openMailer(this);'>Email: Please click.</a>
                         </div>
                     </div>
                 </div>
@@ -146,3 +146,24 @@ $( document ).ready(function() {
 });
 
 </script>
+
+
+  <script language="JavaScript" type="text/javascript">
+  function decode(a) {
+    // ROT13 : a Caesar cipher 
+    // letter -> letter' such that code(letter') = (code(letter) + 13) modulo 26
+    return a.replace(/[a-zA-Z]/g, function(c){
+      return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+    })
+  }; 
+
+  function openMailer(element) {
+    var x = decode("uvobeovg@tznvy.pbz");
+    var y = decode("znvygb:uvobeovg@tznvy.pbz");
+
+    element.setAttribute("href", y);
+    element.setAttribute("onclick", "");
+    element.firstChild.nodeValue = x;
+  };
+
+</script> 
