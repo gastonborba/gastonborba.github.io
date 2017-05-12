@@ -40,8 +40,8 @@ menu: Contact
                             <h4>location</h4>
                         </div>
                         <div class="desc">
-                            Upper Level, Overseas Passenger
-                            <br/>Terminal, The Rocks, Sydney 2000
+                            Montevideo, Uruguay
+                            <br/>Canelones 2231
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,9 @@ menu: Contact
                         </div>
                         <div class="desc">
                             Any time. We are open 24/7
-                            <br/>+1 2345-67-89000
+                            <br/> <a id="phone" href="#" onclick='showPone(this);'>Show Phone: Please click.
+                                <span hidden>XPf1BGtcVQx4VQp2ZvN1AGD=</span>                             
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +72,14 @@ menu: Contact
                         <div class="desc">
                             get support via email
                             <br/>
-                            <a id="email" href="#" onclick='openMailer(this);'>Email: Please click.</a>
+                            <a id="email" href="#" onclick='openMailer(this);'>Email: Please click.
+                                
+                                <span hidden>em52eWdi</span>
+                                <span hidden>Og==</span>
+                                <span hidden>dXZvYmVvdmdAdHpudnkucGJ6</span>
+                             
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -148,22 +157,47 @@ $( document ).ready(function() {
 </script>
 
 
-  <script language="JavaScript" type="text/javascript">
-  function decode(a) {
-    // ROT13 : a Caesar cipher 
-    // letter -> letter' such that code(letter') = (code(letter) + 13) modulo 26
-    return a.replace(/[a-zA-Z]/g, function(c){
-      return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-    })
-  }; 
+<script language="JavaScript" type="text/javascript">
 
-  function openMailer(element) {
-    var x = decode("uvobeovg@tznvy.pbz");
-    var y = decode("znvygb:uvobeovg@tznvy.pbz");
+    function decode(a) {
+        // ROT13 : a Caesar cipher 
+        // letter -> letter' such that code(letter') = (code(letter) + 13) modulo 26
+        return a.replace(/[a-zA-Z]/g, function(c){
+          return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+        })
+    }; 
 
-    element.setAttribute("href", y);
-    element.setAttribute("onclick", "");
-    element.firstChild.nodeValue = x;
-  };
+    function openMailer(element) {
+
+        var href = "";
+        var mail = "";
+        jQuery.each($(element).children(), function() {
+            var span = $(this).text();
+            span = atob(span);
+            span = decode(span);
+            href = href.concat(span);
+            mail = span;
+        });
+
+        element.setAttribute("href", href);
+        element.setAttribute("onclick", "");
+        element.firstChild.nodeValue = mail;
+    };
+
+    function showPone(element) {
+
+        var phone = "";
+
+        jQuery.each($(element).children(), function() {
+            var span = $(this).text();
+            span = decode(span);
+            span = atob(span);
+            phone = phone.concat(span);
+        });
+
+        element.setAttribute("href", "javascript:void(0)");
+        element.setAttribute("onclick", "");
+        element.firstChild.nodeValue = phone;
+    };
 
 </script> 
