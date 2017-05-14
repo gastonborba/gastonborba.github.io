@@ -14,15 +14,17 @@
 
 .btn-app-store {
 	padding: 0;
-	margin-right: 0;
+	margin-right: 5px;
 	border: 0;
 }
 
 .visit-website-black {
 	background-color: black;
 	margin-right: 0;
+	width: 134px;
 }
 
 .img-email {
 	margin-right: 3px;
 }
+

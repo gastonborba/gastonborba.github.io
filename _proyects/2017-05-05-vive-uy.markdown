@@ -5,7 +5,7 @@ date:   2017-05-05 15:04:03 -0700
 author: Gastón Borba
 menu: Portfolio
 website: "http://www.viveuy.com/"
-skills: [iOS, Swift, In-App Purchase]
+skills: [iOS, Swift]
 completed_on: 2016-08-11 15:04:03 -0700
 client: Cecilia Pérez
 download: "https://itunes.apple.com/es/app/viveuy/id1142861327"
