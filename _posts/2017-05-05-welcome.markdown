@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Welcome"
+date:   2017-05-05 15:04:03 -0700
+categories:	[general]
+tags:	[Information]
+author: Gastón Borba
+menu: Blog
+---
+
+We are so happy you're here.   
+
+We created this blog because we wanted to share with you techniques, tips and lessons that we have learned throughout our work.    
+We hope that our posts will be useful for you.
+
+Best regards, Borbit's Team.
