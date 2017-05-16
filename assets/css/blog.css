@@ -31,3 +31,19 @@
 .featured-item-fixed-height {
     height: 350px;
 }
+
+ 
+.testimonial-custom li {
+	height: auto; 
+    padding-left: 0px;
+}
+
+.avatar-custom {
+	padding-left: 0px;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+	padding-left: 0px;
+	padding-right: 0px;
+}
