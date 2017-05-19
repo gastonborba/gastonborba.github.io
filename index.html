@@ -5,19 +5,64 @@ menu: Home
 ---
 
 <section class="body-content ">
+
+    <!--feature -->
     <div class="page-content">
         <div class="container">
             <div class="row">
+
+                <div class="m-bot-50 inline-block">
+                    <!--title-->
+                    <div class="heading-title-alt text-center">
+                        <h3 class="text-uppercase">our services</h3>
+                    </div>
+                    <!--title-->
+                </div>
+
                 <!--feature border box start-->
                 <div class="feature-box-grid">
 
-                    <div class="heading-title text-center">
-                        <h3 class="text-uppercase">things to know before purchasing</h3>
-                        <span class="text-uppercase">You want a good, safe and reliable deal</span>
-                    </div>
-
                     <div class="col-md-4">
-                        <div class="featured-item border-box text-center featured-item-fixed-height ">
+                        <div class="featured-item border-box text-center featured-item-fixed-height">
+                            <div class="icon">
+                                <i class="icon-basic_bolt"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>Fast Delivery</h4>
+                            </div>
+                            <div class="desc">
+                                The App Store makes it simple for users around the world to discover, download and enjoy your apps.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="featured-item border-box text-center featured-item-fixed-height">
+                            <div class="icon">
+                                <i class=" icon-basic_pencil_ruler"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>professional code</h4>
+                            </div>
+                            <div class="desc">
+                                We support both languages, Objective C and Swift. Swift is the result of the latest research on programming languages, combined with decades of experience building Apple platforms.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="featured-item border-box text-center featured-item-fixed-height">
+                            <div class="icon">
+                                <i class="icon-mobile"></i>
+                            </div>
+                            <div class="title text-uppercase">
+                                <h4>easy customize</h4>
+                            </div>
+                            <div class="desc">
+                                Include the new APIs and services that enable new categories of apps and features.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="featured-item border-box text-center featured-item-fixed-height">
                             <div class="icon">
                                 <i class="icon-basic_gear"></i>
                             </div>
@@ -31,21 +76,20 @@ menu: Home
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="featured-item border-box text-center featured-item-fixed-height ">
+                        <div class="featured-item border-box text-center featured-item-fixed-height">
                             <div class="icon">
-                                <i class="icon-basic_pencil_ruler"></i>
+                                <i class="icon-device_iphone"></i>
                             </div>
                             <div class="title text-uppercase">
                                 <h4>Cutting-Edge Technology</h4>
                             </div>
                             <div class="desc">
                                 We exploit all the power of new technologies and employ the most current and high-level IT developments.
-                                We support both languages, Objective C and Swift. 
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="featured-item border-box text-center featured-item-fixed-height ">
+                        <div class="featured-item border-box text-center featured-item-fixed-height">
                             <div class="icon">
                                 <i class="icon-basic_todolist_pencil"></i>
                             </div>
@@ -53,13 +97,66 @@ menu: Home
                                 <h4>clean code</h4>
                             </div>
                             <div class="desc">
-                                Bad code can bring a development organization to its knees. We can guarantee the best practices of writing code.
+                                Bad code can bring a development organization to its knees. But it doesn’t have to be that way. We can guarantee the best practices of writing code.
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--feature border box end-->
+
             </div>
+
         </div>
     </div>
+    <!--feature -->
+
+
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="m-bot-50 inline-block">
+                    <!--title-->
+                    <div class="text-center">
+                        <h3 class="text-uppercase">Recent Work</h3>
+                    </div>
+                    <!--title-->
+                </div>
+                <div class="col-md-12">
+                    <!--filter start-->
+                    <div class="text-center">
+                        <ul class="portfolio-filter">
+                            <li class="active"><a href="#" data-filter="*"> All</a>
+                            </li>
+                            <li><a href="#" data-filter=".cat_ios">iOS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--filter end-->
+
+                    <div class="portfolio col-2 gutter ">
+
+                        {% for proyect in site.proyects %}
+                            <div class="portfolio-item {{ proyect.categories | join: ' ' }}">
+                                <div class="thumb">
+
+                                    <img src="{{ proyect.image }}" alt="">
+                                    <div class="portfolio-hover">
+                                        <div class="action-btn">
+                                            <a href="{{proyect.url}}"> <i class="icon-basic_magnifier"></i> 
+                                            </a>
+                                        </div>
+                                        <div class="portfolio-description">
+                                            <h4><a href="{{proyect.url}}">{{proyect.title}}</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
  </section>
