@@ -421,10 +421,15 @@
 
             });
 
-            $("#testimonial-2").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 1
-            });
+        /*===================================================
+         Borbit: We configure testimonial-2 this in app.js
+         ====================================================*/ 
+//
+//            $("#testimonial-2").owlCarousel({
+//                autoPlay: 10000, //Set AutoPlay to 10 seconds
+//                items: 1
+//            });
+//
 
             $("#testimonial-3").owlCarousel({
                 autoPlay: 4000, //Set AutoPlay to 3 seconds

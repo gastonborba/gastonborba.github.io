@@ -13,7 +13,7 @@ menu: Home
 
                 <div class="m-bot-50 inline-block">
                     <!--title-->
-                    <div class="heading-title-alt text-center">
+                    <div class="heading-title border-short-bottom  text-center">
                         <h3 class="text-uppercase">our services</h3>
                     </div>
                     <!--title-->
@@ -97,7 +97,7 @@ menu: Home
                                 <h4>clean code</h4>
                             </div>
                             <div class="desc">
-                                Bad code can bring a development organization to its knees. But it doesn’t have to be that way. We can guarantee the best practices of writing code.
+                                Bad code can bring a development organization to its knees. But it doesn’t have to be that way. We use best coding practices.
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ menu: Home
             <div class="row">
                 <div class="m-bot-50 inline-block">
                     <!--title-->
-                    <div class="text-center">
+                    <div class="heading-title border-short-bottom text-center">
                         <h3 class="text-uppercase">Recent Work</h3>
                     </div>
                     <!--title-->
@@ -158,5 +158,106 @@ menu: Home
             </div>
         </div>
      </div>
+
+  <div class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="m-bot-50 inline-block">
+                    <!--title-->
+                    <div class="heading-title border-short-bottom text-center">
+                        <h3 class="text-uppercase">Latest blog entry</h3>
+                    </div>
+                    <!--title-->
+                </div>
+                <div class="col-md-12">
+
+                    {% assign post = site.posts.first %}
+                    <!--classic text post-->
+                    <div class="blog-classic">
+                        <div class="date">
+                            {{ post.date | date: "%-d" }}
+                            <span class="text-uppercase">{{ post.date | date: "%b %Y" }}</span>
+                        </div>
+                        <div class="blog-post">
+
+                            {% if post.image %}
+                                <div class="full-width">
+                                    <img src="{{ post.image }}" alt="" />
+                                </div>
+                            {% endif %} 
+
+                            <h4 class="text-uppercase"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                            <ul class="post-meta">
+                                <li><i class="fa fa-user"></i>posted by <a href="#">{{ post.author }}</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-folder-open"></i> 
+                                    {% for category in post.categories %}
+                                        <a href="#">{{ category }} {% if category != post.categories.last %}, {% endif %}</a>
+                                    {% endfor %}
+                                </li>
+                                {% if post.comments != false %}
+                                    <li><i class="fa fa-comments"></i><a href="{{ post.url }}#disqus_thread">0 Comments</a>
+                                    </li>
+                                {% endif %}   
+                            </ul>
+                            {{ post.excerpt }}
+                            <a href="{{ post.url | relative_url }}" class="btn btn-small btn-dark-solid  "> Continue Reading</a>
+                        </div>
+                    </div>
+                    <!--classic text post-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="heading-title border-short-bottom  text-center">
+                    <h3 class="text-uppercase">Testimonials</h3>
+                </div>
+
+                <div class="col-md-12">
+                    <!--testimonial start-->
+                    <div id="testimonial-2" class="outer-border">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    NVestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet.
+                                </p>
+                                <div class="testimonial-meta">
+                                    - Cecilia Pérez -
+                                    <span>Founder at Vive Uy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--testimonial end-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="heading-title border-short-bottom text-center">
+                    <h3 class="text-uppercase">Contact Us</h3>
+                </div>
+
+                {% include contact.html %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
  </section>
