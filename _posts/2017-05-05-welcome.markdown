@@ -6,6 +6,7 @@ categories:	[general]
 tags:	[Info]
 author: Gastón Borba
 menu: Blog
+comments: true
 ---
 
 We are so happy you're here.   
