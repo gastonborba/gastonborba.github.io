@@ -69,22 +69,20 @@
 	font-size: 14px;
 }
 
-.hidden-mobile {
-	display: none;
-}
-
 .m-top-button {
 	margin-top: 50px;
 }
+
+.m-top-subtitle {
+	margin-top: 38px;
+}
+
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
   and (min-device-width: 769px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
 
-  	.hidden-mobile {
-		display:inline;
-	}
 
 	.big-title-mt {
 		margin-top: -150px;
@@ -96,6 +94,10 @@
 
 	.m-top-button {
 		margin-top: 100px;
+	}
+
+	.m-top-subtitle {
+		margin-top: 75px;
 	}
 
 }
@@ -114,12 +116,12 @@
 		padding-top: 0px;
 	}
 
-  	.hidden-mobile {
-		display:inline;
-	}
-
 	.m-top-button {
 		margin-top: 100px;
+	}
+
+	.m-top-subtitle {
+		margin-top: 75px;
 	}	
 }
 
@@ -143,5 +145,7 @@
 .background-black:active {
 	background-color: #333;
 }
+
+
 
 
