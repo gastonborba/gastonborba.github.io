@@ -14,7 +14,7 @@ menu: Home
                 <div class="m-top-subtitle">
                     <h3 class="text-uppercase title-no-letter-spacing">Let's make one, it's super easy </h3>
                 </div>
-                
+
                 <div class="m-top-button">
                     <a href="#our-services" class="btn btn-medium btn-dark-solid btn-rounded text-uppercase button-without-margin-right background-black" data-scroll>Let's get started</a>
                 </div>
@@ -202,7 +202,9 @@ menu: Home
 
                             {% if post.image %}
                                 <div class="full-width">
-                                    <img src="{{ post.image }}" alt="" />
+                                    <a href="{{ post.url | relative_url }}">
+                                        <img src="{{ post.image }}" alt="" />
+                                    </a>
                                 </div>
                             {% endif %} 
 
