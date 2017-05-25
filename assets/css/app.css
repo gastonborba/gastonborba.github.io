@@ -73,6 +73,10 @@
 	display: none;
 }
 
+.m-top-button {
+	margin-top: 50px;
+}
+
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
   and (min-device-width: 769px) 
@@ -88,6 +92,10 @@
 
 	#menuzord-brand {
 		padding-top: 0px;
+	}
+
+	.m-top-button {
+		margin-top: 100px;
 	}
 
 }
@@ -109,12 +117,12 @@
   	.hidden-mobile {
 		display:inline;
 	}
+
+	.m-top-button {
+		margin-top: 100px;
+	}	
 }
 
-
-.m-top-button {
-	margin-top: 100px;
-}
 
 .button-without-margin-right {
 	margin-right: 0px;
