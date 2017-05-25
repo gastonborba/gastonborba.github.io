@@ -60,28 +60,32 @@
 	        <div class="alert alert-success" id="success-alert" hidden>
 	            Your message was sent successfully.
 	        </div>
-	        <form id="contact-form" class="contact-comments js-Mailer" action="https://getsimpleform.com/messages?form_api_token=78fb4cb45b17e070676bd0ce66ce825c" method="post">
+	        <form id="contact-form" class="contact-comments" action="https://getsimpleform.com/messages?form_api_token=78fb4cb45b17e070676bd0ce66ce825c" method="post" >
 	            <div class="row">
 	                <div class="col-md-6 ">
 	                    <div class="form-group">
 	                        <!-- Name -->
-	                        <input type="text" name="name" class=" form-control" placeholder="Name *" maxlength="100" required data-error="You must enter name">
+	                        <input type="text" name="name" class=" form-control" placeholder="Name" maxlength="100" required data-error="You must enter name">
 	                        <div class="help-block with-errors"></div>
 	                    </div>
 	                    <div class="form-group">
 	                        <!-- Email -->
-	                        <input type="email" name="email" class=" form-control" placeholder="Email *" maxlength="100" required data-error="Invalid email address!">
+	                        <input type="email" name="email" class=" form-control" placeholder="Email" maxlength="100" required data-error="Invalid email address!">
 	                        <div class="help-block with-errors"></div>
 	                    </div>
 	                    <div class="form-group">
 	                        <!-- Subject -->
-	                        <input type="text" name="subject" class=" form-control" placeholder="Subject" maxlength="100">
+	                        <input type="text" name="subject" class=" form-control" placeholder="Subject" maxlength="100"
+	                        required data-error="You must enter subject">
+	                        <div class="help-block with-errors"></div>
 	                    </div>
 	                </div>
 	                <div class="col-md-6 form-group">
 	                    <div class="form-group">
 	                        <!-- Comment -->
-	                        <textarea name="comments" class="cmnt-text form-control" placeholder="Comments" maxlength="400"></textarea>
+	                        <textarea name="comments" class="cmnt-text form-control" placeholder="Comments" maxlength="400"
+	                        required data-error="You must enter comments"></textarea>
+	                        <div class="help-block with-errors"></div>
 	                    </div>
 	                    <div class="form-group full-width">
 	                        <button id="contact-submit-button" type="submit" class="btn btn-small btn-dark-solid "  data-loading-text="Sending..." autocomplete="off" >Send Message</button>
@@ -97,28 +101,33 @@
 
 $( document ).ready(function() {
 
-    var form = $('#contact-form');
-    form.submit(function (e) {
-        var $button = $('#contact-submit-button');
-        $button.button('loading');
-        $.ajax({
-            type:   form.attr('method'),
-            url:    form.attr('action'),
-            data:   form.serialize(),
-            success: function (data) {
-                
-                $button.button('reset');
+	var form = $('#contact-form');
+	$.fn.validator.Constructor.FOCUS_OFFSET = 100;
 
-                $('#success-alert').fadeIn('slow');
+    form.validator().on('submit', function (e) {
+		if (!e.isDefaultPrevented()) {
 
-                $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
-                    $("#success-alert").slideUp(500);
-                });
-            }
-        });
+			var $button = $('#contact-submit-button');
+	        $button.button('loading');
+	        $.ajax({
+	            type:   form.attr('method'),
+	            url:    form.attr('action'),
+	            data:   form.serialize(),
+	            success: function (data) {
+	                
+	                $button.button('reset');
 
-        e.preventDefault();
-    });
+	                $('#success-alert').fadeIn('slow');
+
+	                $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+	                    $("#success-alert").slideUp(500);
+	                });
+	            }
+	        });
+
+	        e.preventDefault();
+		}
+	});
 });
 
 </script>
