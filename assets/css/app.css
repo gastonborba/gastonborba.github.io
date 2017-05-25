@@ -128,7 +128,20 @@
 	margin-right: 0px;
 }
 
-#contact-submit-button {
+.background-black {
 	background-color: #333;
 }
+
+.background-black:focus {
+	background-color: #333;
+}
+
+.background-black:hover {
+	background-color: #333;
+}
+
+.background-black:active {
+	background-color: #333;
+}
+
 

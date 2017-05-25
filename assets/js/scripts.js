@@ -13,9 +13,9 @@
      ===============================================*/
     $window.on("load", function () {
         $body.imagesLoaded(function () {
+            $("#fullscreen-banner").height($window.height());
             $(".tb-preloader-wave").fadeOut();
-            //$("#tb-preloader").delay(200).fadeOut("slow").remove();
-            $("#tb-preloader").delay(500).fadeOut("slow").remove();
+            $("#tb-preloader").delay(200).fadeOut("slow").remove();
         });
     });
 
@@ -165,7 +165,7 @@
         /*==============================================
          Full screen banner init
          ===============================================*/
-        $window.bind("resizeEnd", function () {
+       $window.bind("resizeEnd", function () {
             $("#fullscreen-banner").height($window.height());
         });
 
