@@ -43,7 +43,7 @@ layout: default
                                         <i class="fa fa-folder-open"></i> 
 
                                         {% for category in page.categories %}
-                                            <a href="#">{{ category }} {% if category != page.categories.last %}, {% endif %}</a>
+                                            <a href="{{ site.baseurl }}/blog/categories.html#{{ category }}">{{ category }} {% if category != page.categories.last %}, {% endif %}</a>
                                         {% endfor %}
                                     </li>
                                     {% if page.comments != false %}
@@ -59,7 +59,7 @@ layout: default
                                         <div class="widget-tags">
                                             <h6 class="text-uppercase">Tags </h6>
                                             {% for tag in page.tags %}
-                                              <a href="">{{ tag }}</a>
+                                              <a href="{{ site.baseurl }}/blog/tags.html#{{ tag }}" class="capitalize">{{ tag }}</a>
                                             {% endfor %}
                                         </div>
                                     </div>
@@ -118,6 +118,7 @@ layout: default
                                 </div>
 
                                 {% if post.comments != false %}
+                                    
                                     {% if site.disqus.shortname %}
 
                                         {% include disqus_comments.html %}

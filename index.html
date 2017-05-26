@@ -215,7 +215,7 @@ menu: Home
                                 <li>
                                     <i class="fa fa-folder-open"></i> 
                                     {% for category in post.categories %}
-                                        <a href="#">{{ category }} {% if category != post.categories.last %}, {% endif %}</a>
+                                        <a href="{{ site.baseurl }}/blog/categories.html#{{ category }}" >{{ category }} {% if category != post.categories.last %}, {% endif %}</a>
                                     {% endfor %}
                                 </li>
                                 {% if post.comments != false %}
