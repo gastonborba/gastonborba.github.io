@@ -1,0 +1,49 @@
+---
+layout: default
+title: Tags
+---
+
+    <div class="page-content">
+        <div class="container">
+            <div class="row">
+
+                <!--title-->
+                <div class="heading-title border-short-bottom text-center tag-title">
+                    <h3 class="text-uppercase">Tags</h3>
+                </div>
+                <!--title-->
+
+                <div class="tag-container">
+                  {% for tag in site.tags %}
+                    <a href="#{{ tag[0] | slugify }}" class="custom-tag">{{ tag[0] }}</a>
+                  {% endfor %}
+                </div>
+
+            </div>
+
+            <div class="row">
+                {% for tag in site.tags %}
+
+                    <!--title-->
+                    <div  id="{{ tag[0] | slugify }}" class="tag-index"></div>
+                    <div class="heading-title border-short-bottom text-center tag-title">
+                        <h3  class="text-uppercase">{{ tag[0] }}</h3>
+                    </div>
+                    <!--title-->
+
+                    <ul>
+                      {% for post in tag[1] %}
+                        <a class="tag-link" href="{{ site.baseurl }}{{ post.url }}">
+                          <li>
+                            {{ post.title }}
+                            <small>{{ post.date | date_to_string }}</small>
+                          </li>
+                        </a>
+                      {% endfor %}
+                    </ul>
+
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
