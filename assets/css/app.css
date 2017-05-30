@@ -93,19 +93,15 @@
 
 
 	.big-title-mt {
-		margin-top: -150px;
+		margin-top: 0px;
 	}
 
 	#menuzord-brand {
 		padding-top: 0px;
 	}
 
-	.m-top-button {
-		margin-top: 100px;
-	}
-
-	.m-top-subtitle {
-		margin-top: 75px;
+	.container-mid-lg {
+	    top: 40% !important;
 	}
 
 	.tag-title {
@@ -125,20 +121,16 @@
   and (min-resolution: 192dpi) { 
 
   	.big-title-mt {
-		margin-top: -150px;
+		margin-top: 0px;
 	}
 
 	#menuzord-brand {
 		padding-top: 0px;
 	}
 
-	.m-top-button {
-		margin-top: 100px;
+	.container-mid-lg {
+	    top: 40% !important;
 	}
-
-	.m-top-subtitle {
-		margin-top: 75px;
-	}	
 
 	.tag-title {
 		margin-top: 0px;
