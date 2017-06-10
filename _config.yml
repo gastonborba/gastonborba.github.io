@@ -55,6 +55,8 @@ collections:
   proyects:
     output: true
 
+google_analytics: UA-81281254-3
+
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
