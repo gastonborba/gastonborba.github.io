@@ -8,9 +8,9 @@ website: "http://www.viveuy.com/"
 skills: [iOS, Swift]
 completed_on: 2016-08-11 15:04:03 -0700
 client: "Cecilia Pérez"
-client_avatar: "http://massive.markup.themebucket.net/assets/img/testimonial/1.jpg"
+client_avatar: "https://lh3.googleusercontent.com/YbcHoiwszQb7RRWckcTcSfMs9XqXc8FHe7NElzHwd7F0DBYK61LPcO6ni2jUXJ8lNZ6gsRDJRrEmLxSbSFyIi3gCUVTmz4BunIHfGDvpZOfalCNFkNhpwM87Ld_jL4l3sGu7hXcLsdljcYv9swqJQzISPxvhHxDsm1LxxPqqgzVFGsswDNuVy9Nk1IqwuDtB-ttjQv7jRwSOJoBJj3x4h4ngHJ5rcTdrZV5zGTmEBhBk9T9RflhFPktcjoOMZyghVlwVOc23t8Le5TT-HT32ND4CbRZrzdBAbuGBZwgN9UGdTzdLaJazcg7gUP07_u-5i0I9hkkW6uIeTbCezlvfd8Mgu_WC0M6Zp70_0Vm7oLVRThCGoukC7Q5IJizUM2RXQmvEtoRn6t2D0WJPLJImgd0t9x_zueEeZwpmkU_4fv2D09q7Llbr_ZOA4QwtKDcW1JjhfgdTAHFT62YkvpNYvaIIMQrgnQirbN3KHX_m3UQsFuj4wgo-sTKHGv724sTasPFhYQ6a5qhEzqxiQ9mMopBqN-QpvutSOIaCBZqSrhNAR1F8LCMeHdO8tfWh6WKP_EuZMqdPkwqY4RjAjCkl5GUZ_S_lhT-E=s256-no"
 client_position: "Founder at Vive Uy"
-client_testimonial: "Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet."
+client_testimonial: "Gastón was an extremely valuable development resource to create Vive Uy. He made the experience of building the iOS version of my app much easier. With hard work, sense of responsability, skillness and great disposition he built exactly what i was looking to."
 download: "https://itunes.apple.com/es/app/viveuy/id1142861327"
 
 gallery: [ "https://lh3.googleusercontent.com/e24zKsxIlFjrCs-a0-h4xcxcTImSum0IBOTSwHIYsuzn3Q4J6MHSfhJ1brHakm3bl3P1kv5qe0iCqi6N2Wy6IqsHDadwZxE2fQQ5kd_alMq8RcP1unYqdczNpD4nqQg-c1l-TbYkmsbG7K3FpxOvc35_3VQVJG9vavbB2dJGgY2XVZ4tzBCVMTwGZGpBhzZbmKPs5Xe4rOXRgTsNTnQUiPikV5EyleTakf3EhG_ODKvu8RWsmWeifC_r8cCBEvawpvYUVxO5TYWFjETKwUDb5BHYZqZh6us9Qqet3nCSoGv0iJVl1Vn3x9iHb4JIKp4ZCGo_jd2b4_UbT1_5QppcGl0dyBwtRb8McC2DSc3OU20WlyDKu3lvzaFXmuxSEHXpPfyeSw3LXp2IFuhmJ79KC8IIlB5wJi74qmICbwgWlT8bdpo0XoASZE-_F6ef4tsDq_AEnfKHlaE47YFkyXLFc7vfFCXK7I6a0FiATKFS5VQgIqbaFwR2JCOrr5N2mKY6Vhy69HDyYv1wSi5pN9E032KdXkqzD0rrOjf6jA_6PzMdX8lRWkh69G66cqz_Cwg77chGT-sEqF0jFN69vopdWyWJTeuFLMvaKgDfIoQb5-fy8w=w800-h600-no",
@@ -28,6 +28,7 @@ thumbnail: "https://lh3.googleusercontent.com/wxeQK6Y1-rYNG3eJ6PVng8cWyRdLOnb4h0
 categories: [cat_ios]
 ---
 
-Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. Advanced theme options panel to easily customize your website.
+Vive Uy enriches tourist's experience, providing complete information about the destination, its history and current events, emphasizing its attractions: museums, buildings, monuments and public spaces. It is a tool to Live the destiny.
 
-Suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. Advanced theme options panel to easily customize your website. Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. Advanced theme options panel to easily customize your website. Awesome sliders give you the opportunity to showcase your content. Advanced theme options panel to easily customize your website.
+Vive Uy is an application that allows you to make your visit with greater independence and dynamism.
+Our audio guide system provides all the information of the sites of cultural interest of Montevideo.
