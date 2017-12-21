@@ -94,8 +94,7 @@ layout: default
                 <div class="col-md-4">
                     <ul class="portfolio-meta m-bot-30">
                         <li><span> Client </span>{{ page.client }}</li>
-                        <li><span> Created by </span>{{ page.author }}</li>
-                        <li><span> Completed on </span>{{ page.completed_on | date: "%-d %B %Y"}}</li>
+                        <li><span> Developer </span>{{ page.author }}</li>
                         <li><span> Skills </span>
                             {% for skill in page.skills %}
                                 {{ skill }} {% if skill != page.skills.last %} / {% endif %}
