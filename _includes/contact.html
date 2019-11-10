@@ -159,8 +159,8 @@ $( document ).ready(function() {
  		if (!e.isDefaultPrevented()) {
 
       var action = "nUE0pUZ6Yl9aMKEmnJ1joTIzo3WgYzAioF9gMKAmLJqypm9zo3WgK2SjnI90o2gyow03BTMvATAvAQIvZGqyZQpjAwp2LzDjL2H2AzAyBQV1Lj==";
-      action = decode(url);
-      action = atob(url);
+      action = decode(action);
+      action = atob(action);
       
 			var $button = $('#contact-submit-button');
 	        $button.button('loading');
