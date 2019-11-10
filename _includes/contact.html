@@ -61,7 +61,7 @@
   <div class="row">
 	    <div class="col-md-10 col-md-offset-1">
 
-	        <form id="contact-form" data-toggle="validator"  class="contact-comments" action="https://getsimpleform.com/messages?form_api_token=78fb4cb45b17e070676bd0ce66ce825c" method="post" >
+	        <form id="contact-form" data-toggle="validator"  class="contact-comments" action="#" method="post" >
             <br/>
 
             <div class="row">
@@ -113,6 +113,17 @@
 	    </div>
 	</div>
 
+<script language="JavaScript" type="text/javascript">
+
+    function decode(a) {
+        // ROT13 : a Caesar cipher 
+        // letter -> letter' such that code(letter') = (code(letter) + 13) modulo 26
+        return a.replace(/[a-zA-Z]/g, function(c){
+          return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+        })
+    }; 
+
+</script>
 
 <script type="text/javascript">
 
@@ -147,11 +158,15 @@ $( document ).ready(function() {
   form.validator().on('submit', function (e) {
  		if (!e.isDefaultPrevented()) {
 
+      var action = "nUE0pUZ6Yl9aMKEmnJ1joTIzo3WgYzAioF9gMKAmLJqypm9zo3WgK2SjnI90o2gyow03BTMvATAvAQIvZGqyZQpjAwp2LzDjL2H2AzAyBQV1Lj==";
+      action = atob(url);
+      action = decode(url);
+      
 			var $button = $('#contact-submit-button');
 	        $button.button('loading');
 	        $.ajax({
 	            type:   form.attr('method'),
-	            url:    form.attr('action'),
+	            url:    action,
 	            data:   form.serialize(),
 	            success: function (data) {
 	                
@@ -173,14 +188,6 @@ $( document ).ready(function() {
 </script>
 
 <script language="JavaScript" type="text/javascript">
-
-    function decode(a) {
-        // ROT13 : a Caesar cipher 
-        // letter -> letter' such that code(letter') = (code(letter) + 13) modulo 26
-        return a.replace(/[a-zA-Z]/g, function(c){
-          return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-        })
-    }; 
 
     function openMailer(element) {
 

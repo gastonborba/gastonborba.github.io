@@ -207,3 +207,29 @@
 .capitalize {
 	text-transform: capitalize;
 }
+
+/* ----------- Font Color ----------- */
+
+.featured-item .desc {
+  color: #333;
+}
+
+.blog-post p {
+  color: #333;
+}
+
+.owl-item p {
+  color: #333;
+}
+
+.project-detail p {
+  color: #333;
+}
+
+.testimonial .content p {
+  color: #333;
+}
+
+.contact-half-text {
+  color:#333;
+}
