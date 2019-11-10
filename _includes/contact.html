@@ -55,14 +55,25 @@
 		    </div>
 		</div>
 	</div>
-	<div class="row">
+  
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <div class="row">
 	    <div class="col-md-10 col-md-offset-1">
 
-	        <form id="contact-form" class="contact-comments" action="https://getsimpleform.com/messages?form_api_token=78fb4cb45b17e070676bd0ce66ce825c" method="post" >
-            <div class="g-recaptcha" data-sitekey="6LcjxcAUAAAAAC1lOrgEhKpnu1Novwg8Ud6YGo3R"></div>
+	        <form id="contact-form" data-toggle="validator"  class="contact-comments" action="https://getsimpleform.com/messages?form_api_token=78fb4cb45b17e070676bd0ce66ce825c" method="post" >
             <br/>
 
             <div class="row">
+	                
+                  <div class="col-md-6 form-group">
+                      <div class="form-group">
+                          <div class="g-recaptcha" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback" data-sitekey="6LcjxcAUAAAAAC1lOrgEhKpnu1Novwg8Ud6YGo3R"></div>
+                          <input type="hidden" class="form-control" data-recaptcha="true" required>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                  </div>
+
 	                <div class="col-md-6 ">
 	                    <div class="form-group">
 	                        <!-- Name -->
@@ -92,6 +103,7 @@
 	                        <button id="contact-submit-button" type="submit" class="btn btn-small btn-dark-solid background-black"  data-loading-text="Sending..." autocomplete="off" >Send Message</button>
 	                    </div>
 	                </div>
+
 	            </div>
 	        </form>
 
@@ -101,7 +113,6 @@
 	    </div>
 	</div>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script type="text/javascript">
 
@@ -110,8 +121,31 @@ $( document ).ready(function() {
 	var form = $('#contact-form');
 	$.fn.validator.Constructor.FOCUS_OFFSET = 100;
 
-    form.validator().on('submit', function (e) {
-		if (!e.isDefaultPrevented()) {
+  // Bootstrap-validator and reCaptcha
+  // https://github.com/1000hz/bootstrap-validator/issues/202
+  var originalInputSelector = $.fn.validator.Constructor.INPUT_SELECTOR;
+  $.fn.validator.Constructor.INPUT_SELECTOR = originalInputSelector + ', input[data-recaptcha]';
+
+  window.verifyRecaptchaCallback = function (response) {
+    $('input[data-recaptcha]').val(response).trigger('change')
+  };
+
+  window.expiredRecaptchaCallback = function () {
+    $('input[data-recaptcha]').val("").trigger('change')
+  };
+
+  $('form[data-toggle="validator"]').validator({
+    custom: {
+      recaptcha: function ($el) {
+        if (!$el.val()) {
+          return "Please complete the captcha"
+        }
+      }
+    }
+  });
+
+  form.validator().on('submit', function (e) {
+ 		if (!e.isDefaultPrevented()) {
 
 			var $button = $('#contact-submit-button');
 	        $button.button('loading');
