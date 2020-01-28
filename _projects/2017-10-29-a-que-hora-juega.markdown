@@ -1,5 +1,5 @@
 ---
-layout: proyect
+layout: project
 title:  "¿A qué hora juega?"
 date:   2017-12-20 15:04:03 -0700
 author: Gastón Borba

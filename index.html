@@ -155,18 +155,18 @@ menu: Home
 
                     <div class="portfolio col-2 gutter ">
 
-                        {% for proyect in site.proyects %}
-                            <div class="portfolio-item {{ proyect.categories | join: ' ' }}">
+                        {% for project in site.projects %}
+                            <div class="portfolio-item {{ project.categories | join: ' ' }}">
                                 <div class="thumb">
 
-                                    <img src="{{ proyect.image }}" alt="">
+                                    <img src="{{ project.image }}" alt="">
                                     <div class="portfolio-hover">
                                         <div class="action-btn">
-                                            <a href="{{proyect.url}}"> <i class="icon-basic_magnifier"></i> 
+                                            <a href="{{project.url}}"> <i class="icon-basic_magnifier"></i> 
                                             </a>
                                         </div>
                                         <div class="portfolio-description">
-                                            <h4><a href="{{proyect.url}}">{{proyect.title}}</a></h4>
+                                            <h4><a href="{{project.url}}">{{project.title}}</a></h4>
                                         </div>
                                     </div>
                                 </div>

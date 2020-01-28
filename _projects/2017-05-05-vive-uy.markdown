@@ -1,5 +1,5 @@
 ---
-layout: proyect
+layout: project
 title:  "Vive Uy"
 date:   2017-05-05 15:04:03 -0700
 author: Gastón Borba

@@ -58,7 +58,7 @@ disqus:
 
 # Collections
 collections:
-  proyects:
+  projects:
     output: true
 
 google_analytics: UA-81281254-3

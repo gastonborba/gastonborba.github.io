@@ -29,8 +29,8 @@
                     <h5 class="text-uppercase">Recent Work</h5>
                     <ul class="r-work">
 
-                        {% for proyect in site.proyects limit:9 %}
-                            <li><a href="{{ proyect.url }}"><img src="{{ proyect.thumbnail }}" alt=""></a></li>
+                        {% for project in site.projects limit:9 %}
+                            <li><a href="{{ project.url }}"><img src="{{ project.thumbnail }}" alt=""></a></li>
                         {% endfor %}
     
                     </ul>
