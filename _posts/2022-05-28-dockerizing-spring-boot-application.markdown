@@ -27,12 +27,10 @@ To manually initialize the project:
 3. Click **Dependencies** and select **Spring Web**.
 4. Click **Generate**.
 
-<img src="/assets/img/spring-initializr.png" alt="Spring Initilizr" style="width: 100%;"/>
-
 ## Set up a Spring Boot Application
 Now you can update the DemoApplication.java:
 
-<pre><code class="language-java">package com.example.demo;
+<pre class="pre-without-padding"><code class="language-java">package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -57,7 +55,7 @@ public class DemoApplication {
 
 ## Containerize It
 Create the following Dockerfile in your Spring Boot project:
-<pre><code class="language-dockerfile">FROM maven:3.8.5-openjdk-17 as build
+<pre class="pre-without-padding"><code class="language-dockerfile">FROM maven:3.8.5-openjdk-17 as build
 
 WORKDIR /app
 
@@ -77,12 +75,12 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 
 ## Build the Docker Image
 
-<pre><code class="language-bash">docker build -t demo:latest .
+<pre class="pre-without-padding"><code class="language-bash">docker build -t demo:latest .
 </code></pre>
 
 ## Run the Container
 
-<pre><code class="language-bash">docker run -p 8080:8080 demo:latest
+<pre class="pre-without-padding"><code class="language-bash">docker run -p 8080:8080 demo:latest
 </code></pre>
 
 Now you can visit <a href="http://localhost:8080">http://localhost:8080</a>  
